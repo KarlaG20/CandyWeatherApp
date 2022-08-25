@@ -1,0 +1,137 @@
+.container {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 500;
+}
+.application {
+  border: 3px solid #fff87d;
+  border-radius: 20px;
+  padding: 10px 20px;
+  max-width: 900px;
+  display: block;
+  margin: 20px auto;
+  top: 50px;
+}
+.diseno {
+  display: block;
+  margin: 0 auto;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+}
+
+#boton {
+  background: #28f7de;
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: solid 1px #28f7de;
+}
+
+#cityInput {
+  width: 500px;
+  border: 2px solid;
+  border-color: #28f7de;
+  height: 40px;
+  border-radius: 5px;
+  margin: 10px 0 10px 150px;
+}
+
+.boton:hover {
+  background: #0a58ca;
+  width: 500px;
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: 5px;
+}
+#current {
+  background: #b44aff;
+  display: block;
+  margin: 0 auto;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: solid 1px #b44aff;
+}
+
+.time {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #64a6ff;
+}
+
+#city {
+  font-size: 40px;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 500;
+}
+
+#temp {
+  font-size: 60px;
+}
+
+#temp_ {
+  font-size: 60px;
+}
+
+#emoji {
+  font-size: 40px;
+}
+
+.condition {
+  font-size: 12px;
+}
+#date {
+  font-size: 20px;
+  text-align: left;
+}
+
+#title {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border: 1px #ff98cf solid;
+  border-radius: 10px;
+  background: #ff98cf;
+}
+
+.right {
+  text-align: center;
+  background-color: #f0ffff;
+}
+
+.left {
+  text-align: center;
+}
+
+.picture {
+  font-size: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+#cloudy {
+  color: #b9affe;
+}
+
+#sun {
+  color: #ff8d00;
+}
+
+#rain {
+  color: #3babfd;
+}
+
+#name {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+}
