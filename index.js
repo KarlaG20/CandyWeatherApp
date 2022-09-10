@@ -36,6 +36,8 @@ function showConditions(response) {
   let description = document.querySelector("#description");
   let icon = document.querySelector("#icon");
 
+  celcious = response.data.main.temp;
+
   tempe.innerHTML = Math.round(response.data.main.temp);
   humidity.innerHTML = `: ${response.data.main.humidity}%`;
   wind.innerHTML = `: ${response.data.wind.speed}km/h`;
@@ -72,6 +74,8 @@ function showLocation(response) {
   let wind = document.querySelector("#wind");
   let icon = document.querySelector("#icon");
 
+  celcious = response.data.main.temp;
+
   city.innerHTML = response.data.name;
   temperatura.innerHTML = Math.round(response.data.main.temp);
   description.innerHTML = response.data.weather[0].description;
@@ -99,24 +103,29 @@ function showCurrent(event) {
 let current = document.querySelector("#current");
 current.addEventListener("click", showCurrent);
 
-// F
+//F
 
-function fTransform(event) {
+function showFTemp(event) {
   event.preventDefault();
-  let tempValue = document.querySelector("#temp");
-  tempValue.innerHTML = "64.4°";
+  let tempStart = document.querySelector("#temp");
+  C_link.classList.remove("active");
+  f_link.classList.add("active");
+  let FTemperature = (celcious * 9) / 5 + 32;
+  tempStart.innerHTML = Math.round(FTemperature);
 }
 
-let fTemp = document.querySelector("#F");
-fTemp.addEventListener("click", fTransform);
-
-//C
-
-function cTransform(event) {
+function showFTempC(event) {
   event.preventDefault();
-  let tempValue = document.querySelector("#temp");
-  tempValue.innerHTML = "18°";
+  C_link.classList.add("active");
+  f_link.classList.remove("active");
+  let tempStart = document.querySelector("#temp");
+  tempStart.innerHTML = Math.round(celcious);
 }
 
-let cTemp = document.querySelector("#C");
-cTemp.addEventListener("click", cTransform);
+let f_link = document.querySelector("#F");
+f_link.addEventListener("click", showFTemp);
+
+let celcious = null;
+
+let C_link = document.querySelector("#C");
+C_link.addEventListener("click", showFTempC);

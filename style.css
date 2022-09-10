@@ -120,3 +120,12 @@ form {
   margin: 0 auto;
   font-size: 12px;
 }
+
+.temps .active {
+  cursor: default;
+  color: rgb(33, 33, 33);
+}
+
+.temps .active:hover {
+  text-decoration: none;
+}
