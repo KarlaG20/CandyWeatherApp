@@ -21,34 +21,19 @@ h1 {
   margin: 0 auto;
 }
 
-form {
-  display: block;
-  margin: 0 auto;
-}
-
 #boton {
   background: #28f7de;
+  border-color: #28f7de;
   color: black;
-  border-radius: 5px;
-  padding: 5px 10px;
-  border: solid 1px #28f7de;
 }
 
 #cityInput {
-  width: 500px;
   border: 2px solid;
   border-color: #28f7de;
-  height: 40px;
-  border-radius: 5px;
-  margin: 10px 0 10px 150px;
 }
 
-.boton:hover {
-  background: #0a58ca;
-  width: 500px;
-  padding: 5px 10px;
-  margin: 0;
-  border-radius: 5px;
+form {
+  padding: 10px 20px;
 }
 #current {
   background: #b44aff;
