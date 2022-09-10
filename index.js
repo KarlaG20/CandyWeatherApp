@@ -31,11 +31,19 @@ dateElement.innerHTML = formatDate(currentTime);
 function showConditions(response) {
   console.log(response.data);
   let tempe = document.querySelector("#temp");
-  tempe.innerHTML = Math.round(response.data.main.temp);
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `: ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
+  let description = document.querySelector("#description");
+  let icon = document.querySelector("#icon");
+
+  tempe.innerHTML = Math.round(response.data.main.temp);
+  humidity.innerHTML = `: ${response.data.main.humidity}%`;
   wind.innerHTML = `: ${response.data.wind.speed}km/h`;
+  description.innerHTML = response.data.weather[0].description;
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 // City
@@ -56,14 +64,23 @@ let cityForm = document.querySelector("#boton");
 cityForm.addEventListener("click", showCity);
 
 function showLocation(response) {
+  console.log(response.data);
   let city = document.querySelector("#city");
-  city.innerHTML = response.data.name;
   let temperatura = document.querySelector("#temp");
-  temperatura.innerHTML = Math.round(response.data.main.temp);
+  let description = document.querySelector("#description");
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `: ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
+  let icon = document.querySelector("#icon");
+
+  city.innerHTML = response.data.name;
+  temperatura.innerHTML = Math.round(response.data.main.temp);
+  description.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = `: ${response.data.main.humidity}%`;
   wind.innerHTML = `: ${response.data.wind.speed}km/h`;
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showCoordinates(position) {
@@ -103,5 +120,3 @@ function cTransform(event) {
 
 let cTemp = document.querySelector("#C");
 cTemp.addEventListener("click", cTransform);
-
-//showing temperature
