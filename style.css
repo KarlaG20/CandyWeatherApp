@@ -53,9 +53,13 @@ form {
 }
 
 #city {
+  display: block;
+  margin: 20px 0 0 0;
   font-size: 40px;
   font-family: "Signika Negative", sans-serif;
   font-weight: 500;
+  vertical-align: bottom;
+  text-align: center;
 }
 
 #temp {
@@ -71,7 +75,12 @@ form {
 }
 
 .condition {
-  font-size: 12px;
+  font-size: 15px;
+}
+
+#description {
+  display: block;
+  text-align: center;
 }
 #date {
   font-size: 20px;
@@ -128,4 +137,38 @@ form {
 
 .temps .active:hover {
   text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  margin: 0 0 25px 0;
+  vertical-align: top;
+}
+
+ul {
+  list-style: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  color: #000;
+  opacity: 0.6;
+}
+
+.temperatures {
+  font-size: 16px;
+}
+
+.temp-min {
+  opacity: 0.7;
+}
+
+.float-left-day {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

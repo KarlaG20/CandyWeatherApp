@@ -41,7 +41,7 @@ function showConditions(response) {
   tempe.innerHTML = Math.round(response.data.main.temp);
   humidity.innerHTML = `: ${response.data.main.humidity}%`;
   wind.innerHTML = `: ${response.data.wind.speed}km/h`;
-  description.innerHTML = response.data.weather[0].description;
+  description.innerHTML = response.data.weather[0].main;
   icon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -78,7 +78,7 @@ function showLocation(response) {
 
   city.innerHTML = response.data.name;
   temperatura.innerHTML = Math.round(response.data.main.temp);
-  description.innerHTML = response.data.weather[0].description;
+  description.innerHTML = response.data.weather[0].main;
   humidity.innerHTML = `: ${response.data.main.humidity}%`;
   wind.innerHTML = `: ${response.data.wind.speed}km/h`;
   icon.setAttribute(

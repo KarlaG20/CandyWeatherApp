@@ -55,73 +55,61 @@
         <div class="time">
           <span id="date"></span>
         </div>
-        <br />
         <div class="row">
-          <div class="col-4 left">
+          <div class="col-4">
             <span id="city">Wollongong</span>
-            <br />
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              id="icon"
-              alt="clear"
-              class="float-left"
-            />
-
-            <div class="temps">
-              <a href="#" id="C" class="active" style="text-decoration: none"
-                >°C</a
-              >|<a href="#" id="F" class="active" style="text-decoration: none"
-                >°F</a
-              >
-            </div>
-            <span id="temp">18</span><span id="temp_">°</span>
-            <br />
-            <span class="condition" id="description">Clear</span>
-            <br />
-            <span class="condition">Humidity <span id="humidity"></span></span>
-            <br />
-            <span class="condition">Wind <span id="wind"></span></span>
           </div>
-          <div class="col-7">
-            <span id="title">Forecast</span>
-            <br />
-            <br />
-            <div class="row right">
+          <div class="col-4">
+            <div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                id="icon"
+                alt="clear"
+                class="float-left"
+              />
+              <span id="temp">18</span><span id="temp_">°</span>
+              <span class="temps">
+                <a href="#" id="C" class="active" style="text-decoration: none"
+                  >°C</a
+                >|<a
+                  href="#"
+                  id="F"
+                  class="active"
+                  style="text-decoration: none"
+                  >°F</a
+                >
+              </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="condition" id="description">Clear</span>
+            <div>
+              <ul>
+                <li>
+                  <span class="condition">Humidity</span
+                  ><span id="humidity"></span>
+                </li>
+                <li>
+                  <span class="condition">Wind</span><span id="wind"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-forecast">
+            <div class="row">
               <div class="col-2">
-                Monday <br />
-                <small>Sunny</small><br /><br />
-                <i class="fa-solid fa-sun picture" id="sun"></i>
-                <br /><br />
-                18°/10°
-              </div>
-              <div class="col-3">
-                Tuesday <br />
-                <small>Cloudy</small><br /><br />
-                <i class="fa-solid fa-cloud-sun picture" id="cloudy"></i>
-                <br /><br />
-                15°/11°
-              </div>
-              <div class="col-3">
-                Wednesday <br />
-                <small>Rain</small><br /><br />
-                <i class="fa-solid fa-cloud-sun-rain picture" id="rain"></i>
-                <br /><br />
-                10°/8°
-              </div>
-              <div class="col-2">
-                Thursday <br />
-                <small>Sunny</small><br /><br />
-                <i class="fa-solid fa-sun picture" id="sun"></i>
-                <br />
-                <br />
-                18°/15°
-              </div>
-              <div class="col-2">
-                Friday <br />
-                <small>Sunny</small><br /><br />
-                <i class="fa-solid fa-sun picture" id="sun"></i>
-                <br /><br />
-                18°/13°
+                <div class="weather-forecast-date">Thu</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  id="icon"
+                  alt="clear"
+                  class="float-left-day"
+                  width="42"
+                />
+                <div class="temperatures">
+                  <span class="temp-max">18°</span>
+                  <span class="temp-min">12°</span>
+                </div>
               </div>
             </div>
           </div>
@@ -129,7 +117,6 @@
       </div>
     </div>
     <script src="index.js"></script>
-    <br />
     <span id="name"
       ><a href="https://github.com/KarlaG20/CandyWeatherApp" target="_blank"
         >Open source</a
