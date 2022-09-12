@@ -26,6 +26,33 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecastweather");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `         <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  id="icon"
+                  alt="clear"
+                  class="float-left-day"
+                  width="42"
+                />
+                <div class="temperatures">
+                  <span class="temp-max">18°</span>
+                  <span class="temp-min">12°</span>
+                </div>
+              </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
 //Show temperature
 
 function showConditions(response) {
@@ -129,3 +156,5 @@ let celcious = null;
 
 let C_link = document.querySelector("#C");
 C_link.addEventListener("click", showFTempC);
+
+displayForecast();
